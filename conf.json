@@ -1,0 +1,6 @@
+{
+	"maxplayers" : 5,
+	"name" : "RAGE:MP Unofficial server",
+	"streamdistance": 500.0,
+	"announce": false
+}
