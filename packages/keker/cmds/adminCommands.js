@@ -28,7 +28,7 @@ module.exports =
         if(!player.admin) return player.outputChatBox("<span style='color:#ff2d00'>(!) Nu esti administrator!");
         mp.players.forEach(_player => {
             if(_player.admin)
-                _player.outputChatBox("<span style='color:#f3cb8f'>Admin "  + player.name + ": " + args[0])
+                _player.outputChatBox("<span style='color:#f3cb8f'>Admin "  + player.name + ": " + args.join(' '))
         });
 	},
     
