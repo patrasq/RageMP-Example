@@ -25,12 +25,12 @@ module.exports =
     },
     "register": (player, args) =>
     {
-        if ( typeof player.ID !== 'undefined' || Players.IsPlayerLogged ( player.ID ) ) {
+        if ( typeof player.ID === 'undefined' || Players.IsPlayerLogged ( player.ID ) ) {
             DB.Handle.query("SELECT null FROM server_players WHERE Name = ?", player.name, function(e, result) {
                 if (!e) {
                     if ( !result.length ) {
-                        if ( params.length >= 6 ) {
-                            DB.Handle.query("INSERT INTO server_players (Name, Password) VALUES (?,?)", [player.name, args[0]], function(e) {
+                        if ( args[0].length >= 6 ) {
+                            DB.Handle.query("INSERT INTO server_players (Name, Password, Admin) VALUES (?,?,0)", [player.name, args[0]], function(e) {
                                 if ( e ) console.log ( e );   
                                 player.outputChatBox("Now use /login [Password]"); 
                             });
