@@ -40,7 +40,7 @@ function IsPlayerLogged(id) {
 module.exports.IsPlayerLogged = IsPlayerLogged;
 
 module.exports.Init = function() {
-    DB.Handle.query("CREATE TABLE IF NOT EXISTS `server_players` (`ID` int(11) NOT NULL,`Name` varchar(24) NOT NULL,`Password` varchar(128) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;", function() { } );
+    DB.Handle.query("CREATE TABLE IF NOT EXISTS `server_players` (`ID` int(11) NOT NULL,`Name` varchar(24) NOT NULL,`Password` varchar(128) NOT NULL, `Admin` varchar(128) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;", function() { } );
     DB.Handle.query("ALTER TABLE `server_players` ADD PRIMARY KEY (`ID`);", function() { } );
     DB.Handle.query("ALTER TABLE `server_players` MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;", function() { } );
 }
