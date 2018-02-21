@@ -14,4 +14,4 @@ After you installed Node.js open a new Command Promnt window on server-files fol
 npm install mysql
 ```
 
-And that's it, your'e good to go :)
+And that's it, you are good to go :)
